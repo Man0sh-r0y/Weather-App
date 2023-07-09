@@ -1,5 +1,22 @@
-# Weather App
+# Simple Weather App
 
-[Website Link](https://manash-weather-app.netlify.app/)
+[Live Demo](https://weather-app-by-manash.vercel.app/)
 
-![Weather App](https://github.com/Man0sh-r0y/Web-Developement-2023/assets/96605313/6edf941e-674b-48a2-8bfc-19a742e93e8b)
+It's a simple Weather App. It uses Current Weather API from [openweathermap.org](https://openweathermap.org/) and renders the current weather data based on your location.
+
+## Used API
+To get Weather Data based on Latitude and Longitude
+```bash
+    https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+```
+To get weather data based on City Name
+
+```bash
+    https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+```
+
+
+## Tech Stack
+
+HTML, CSS, JavaScript
+
