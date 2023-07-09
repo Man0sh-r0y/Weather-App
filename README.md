@@ -1,6 +1,6 @@
 # Simple Weather App
 
-[Live Demo](https://weather-app-by-manash.vercel.app/)
+✅ Watch Live Preview 👉👉 [Live Demo](https://weather-app-by-manash.vercel.app/)
 
 It's a simple Weather App. It uses Current Weather API from [openweathermap.org](https://openweathermap.org/) and renders the current weather data based on your location.
 
