@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Weather App</h1> <!--Heading-->
+
+        <div class="tab-container"> <!--2 tabs-->
+            <p class="tab" data-userWeatherTab>Your Weather</p> <!--Info about my weather tab-->
+            <p class="tab" data-searchWeatherTab>Search Weather</p>
+            <!--In this tab we can search weather for different location-->
+        </div>
+
+        <div class="weather-container">
+
+            <!--grant access location container-->
+            <div class="grant-access-location sub-container">
+                <img src="assets/location.png" width="80" height="80" loading="lazy" alt="location">
+                <!--The loading attribute specifies whether a browser should load an image immediately 
+                or to defer loading of off-screen images until for example the user scrolls near them.-->
+                <p>grant location access</p>
+                <p>allow to get weather information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!--Search Weather form container-->
+            <form class="search-weather-by-city" data-searchWeatherByCity>
+                <!--Here this below input tag will craete a search box where I can search for any city-->
+                <input placeholder="Search for City..." data-searchByCity>
+                <button class="btn" type="submit">
+                    <img src="assets/search.png" width="20" height="20" loading="lazy" alt="Search">
+                </button><!--Search button -->
+            </form>
+
+            <!--Loading Screen Generator-->
+            <div class="loading-container sub-container">
+                <img src="assets/loading.gif" width="150" height="150" alt="Loading">
+                <p>Loading</p><!--Untill JS Async code fetching the data, screen will be loaded-->
+            </div>
+
+            <!--Show Weather Information-->
+            <div class="weather-info sub-container">
+
+                <!--city name and flag-->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!--Weather Description-->
+                <p data-weatherDesc></p><!--We will update these value dynamically-->
+                <!--Weather Icon-->
+                <img data-weatherIcon>
+                <!--Temperature-->
+                <p data-temperature></p>
+
+                <!--# Weather partameter-->
+                <div class="parameter-container">
+
+                    <!--Card 1: windspeed-->
+                    <div class="parameter">
+                        <img src="assets/wind.png" alt="wind">
+                        <p>windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!--Card 2: humidity-->
+                    <div class="parameter">
+                        <img src="assets/humidity.png" alt="humidity">
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!--Card 3: cloudiness-->
+                    <div class="parameter">
+                        <img src="assets/cloud.png" alt="cloud">
+                        <p>coulds</p>
+                        <p data-cloudiness></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sub-container api-error-container">
+                <!--When we requent data from server (for weather) if not found data then this message will be shown-->
+                <img src="assets/not-found.png" data-notFoundImg="">
+                <p data-apiErrorText="">city not found</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Including Javascript file-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
