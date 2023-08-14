@@ -124,7 +124,6 @@ function renderWeatherInfo(weatherData) {
     const cityName = document.querySelector('[data-cityName]');
     const countryIcons = document.querySelector('[data-countryIcon]');
     const weatherDesc = document.querySelector('[data-weatherDesc]');
-    const weatherIcon = document.querySelector('[data-weatherIcon]');
     const temperature = document.querySelector('[data-temperature]');
     const windSpeed = document.querySelector('[data-windSpeed]');
     const humidity = document.querySelector('[data-humidity]');
@@ -137,12 +136,37 @@ function renderWeatherInfo(weatherData) {
     //  If the `weatherData` object is null or undefined, the expression will short-circuit and return undefined.
     countryIcons.src = `https://flagcdn.com/144x108/${weatherData?.sys?.country.toLowerCase()}.png`;
     weatherDesc.innerText = weatherData?.weather?.[0]?.description;
-    weatherIcon.src = `http://openweathermap.org/img/w/${weatherData?.weather?.[0]?.icon}.png`;
+    // weatherIcon.src = `http://openweathermap.org/img/w/${weatherData?.weather?.[0]?.icon}.png`;
     temperature.innerText = weatherData?.main?.temp + '°C';
     windSpeed.innerText = weatherData?.wind?.speed + 'm/s';
     humidity.innerText = weatherData?.main?.humidity + '%';
     cloudiness.innerText = weatherData?.clouds?.all + '%';
+    showWeatherIcon(weatherData);
     /* These lines of code are responsible for displaying the weather information for the user's current location or seleted location */
+}
+
+function showWeatherIcon(weatherData) {
+    const weatherIcon = document.querySelector('[data-weatherIcon]');
+
+    const ImageSource = {// stored the image soruce of all weather 
+        Clouds: './assets/Clouds.png',
+        Rain: './assets/Rain.png',
+        Snow: './assets/Snow.png',
+        Thunderstorm: './assets/Thunderstorm.png',
+        Drizzle: './assets/Drizzle.png',
+        Clear: './assets/Clear.png',
+        Haze: './assets/Haze.png',
+        Mist: './assets/Mist.png',
+        Fog: './assets/Fog.png',
+        Dust: './assets/Dust.png',
+        Smoke: './assets/Smoke.png',
+        Sand: './assets/Sand.png',
+        Ash: './assets/Ash.png',
+        Squalls: './assets/Squalls.png',
+        Tornado: './assets/Tornado.png',
+    }
+    
+    weatherIcon.src = ImageSource[weatherData?.weather?.[0]?.main];
 }
 
 // when the user will be asked to grant the permission of the location, 

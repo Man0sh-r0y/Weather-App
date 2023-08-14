@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <!--Apply Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Cabin:ital,wght@1,700&family=Fjalla+One&family=Martian+Mono:wght@600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <div class="wrapper">
 
-        <h1>Weather App</h1> <!--Heading-->
+        <h1>Weather</h1> <!--Heading-->
 
         <div class="tab-container"> <!--2 tabs-->
             <p class="tab" data-userWeatherTab>Your Weather</p> <!--Info about my weather tab-->
@@ -24,7 +30,7 @@
 
             <!--grant access location container-->
             <div class="grant-access-location sub-container">
-                <img src="assets/location.png" width="80" height="80" loading="lazy" alt="location">
+                <img src="assets/Location.png" width="110" height="110" loading="lazy" alt="location">
                 <!--The loading attribute specifies whether a browser should load an image immediately 
                 or to defer loading of off-screen images until for example the user scrolls near them.-->
                 <p>grant location access</p>
@@ -59,7 +65,7 @@
                 <!--Weather Description-->
                 <p data-weatherDesc></p><!--We will update these value dynamically-->
                 <!--Weather Icon-->
-                <img data-weatherIcon>
+                <img class="weather-icon" data-weatherIcon>
                 <!--Temperature-->
                 <p data-temperature></p>
 
@@ -68,21 +74,21 @@
 
                     <!--Card 1: windspeed-->
                     <div class="parameter">
-                        <img src="assets/wind.png" alt="wind">
+                        <img src="assets/wind2.png" alt="wind">
                         <p>windspeed</p>
                         <p data-windSpeed></p>
                     </div>
 
                     <!--Card 2: humidity-->
                     <div class="parameter">
-                        <img src="assets/humidity.png" alt="humidity">
+                        <img src="assets/humidity2.png" alt="humidity">
                         <p>humidity</p>
                         <p data-humidity></p>
                     </div>
 
                     <!--Card 3: cloudiness-->
                     <div class="parameter">
-                        <img src="assets/cloud.png" alt="cloud">
+                        <img src="assets/cloud2.png" alt="cloud">
                         <p>coulds</p>
                         <p data-cloudiness></p>
                     </div>
