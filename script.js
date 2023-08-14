@@ -137,10 +137,10 @@ function renderWeatherInfo(weatherData) {
     countryIcons.src = `https://flagcdn.com/144x108/${weatherData?.sys?.country.toLowerCase()}.png`;
     weatherDesc.innerText = weatherData?.weather?.[0]?.description;
     // weatherIcon.src = `http://openweathermap.org/img/w/${weatherData?.weather?.[0]?.icon}.png`;
-    temperature.innerText = weatherData?.main?.temp + '°C';
-    windSpeed.innerText = weatherData?.wind?.speed + 'm/s';
-    humidity.innerText = weatherData?.main?.humidity + '%';
-    cloudiness.innerText = weatherData?.clouds?.all + '%';
+    temperature.innerText = weatherData?.main?.temp + ' °C';
+    windSpeed.innerText = weatherData?.wind?.speed + ' m/s';
+    humidity.innerText = weatherData?.main?.humidity + ' %';
+    cloudiness.innerText = weatherData?.clouds?.all + ' %';
     showWeatherIcon(weatherData);
     /* These lines of code are responsible for displaying the weather information for the user's current location or seleted location */
 }
