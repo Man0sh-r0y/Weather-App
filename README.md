@@ -20,6 +20,7 @@ To get weather data based on City Name
 
 HTML, CSS, JavaScript
 
+
 ## Demo
 
 ![MyWeather](https://github.com/Man0sh-r0y/Weather-App/assets/96605313/bf2ac22b-69bf-410a-8cb9-a05386420a3c)
