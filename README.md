@@ -23,5 +23,5 @@ HTML, CSS, JavaScript
 
 ## Demo
 
-![MyWeather](https://github.com/Man0sh-r0y/Weather-App/assets/96605313/bf2ac22b-69bf-410a-8cb9-a05386420a3c)
+![MyWeather](https://github.com/Man0sh-r0y/Weather-App/assets/96605313/6f488072-1f94-4fc1-973a-25a6933919a1)
 
